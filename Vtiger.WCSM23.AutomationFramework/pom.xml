@@ -62,6 +62,23 @@
 	<profiles>
 		
 		<profile>
+			<id>Read</id>
+			<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M8</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>ReadData_Commandtestng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+		</profile>
+		<profile>
 			<id>crossBrowser</id>
 			<build>
 		<plugins>
@@ -78,7 +95,6 @@
 		</plugins>
 	</build>
 		</profile>
-		
 			
 		<profile>
 			<id>BatchExecution</id>
@@ -114,23 +130,7 @@
 		</plugins>
 	</build>
 		</profile>
-			<profile>
-			<id>failed</id>
-			<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M8</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>target\surefire-reports\testng-failed.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-		</profile>
+		
 			
 	</profiles>
 	
