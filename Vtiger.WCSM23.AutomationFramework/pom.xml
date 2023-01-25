@@ -78,6 +78,7 @@
 		</plugins>
 	</build>
 		</profile>
+		
 		<profile>
 			<id>crossBrowser</id>
 			<build>
