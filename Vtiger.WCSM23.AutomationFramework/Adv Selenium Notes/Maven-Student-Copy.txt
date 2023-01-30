@@ -1,0 +1,166 @@
+MAVEN
+-> Its also called as Build management Tool, Build testing Tool, Build Dependency Tool,
+-> Maven is Tool used which has become popular for the build management instead ANT and GRADLE
+
+=> Why Maven used in Development?
+   - In case of Development Maven is used as Build Process Tool [Build creation, Build testing
+     and Build Deployment]. 
+   - Various Maven commands are used for these build related actions like
+     -> Build Creation process:
+        Process of converting the source code into any executable format
+        "mvn package" is the maven command used
+     -> Build Testing Process:
+        Since multiple Developers will be contributing to the projects, We have to test the project
+        for compilation issues, or/and if the build is broken or not.
+        "mvn Compile", "mvn Test" is the maven command is used.
+     -> Build Deployment Process:
+        Process of installing the build into Testing server/any other Environment
+        "mvn Deploy", "mvn install" is the maven command is used
+
+=> Why Maven used in Automation Testing?
+   - In Automation Maven is used for Testing the Application with the current/recent Framework
+     by executing the test scripts
+   - When Multiple automation testers are working with same framework, there might be chances
+     that the changes made by one Automation engg might affect the entire framework, in order 
+     to over come this issue we run the Maven life cycle for every build
+   - mvn clean, mvn validate, mvn compile, mvn test are the maven command used
+
+=> Softwares in Maven:
+1. Maven Eclipse Plugin: This is inbuilt plugin available when in eclipse. It helps to create
+                         Maven project and provides folder structure as
+
+To create maven Project:
+Group id: Organization/Community Name
+Artifact Id: Project Name
+
+Inside Maven Project: Framework folder structure
+src/main/java
+ -> GenericUtilities
+ -> ObjectRepository
+src/main/resources
+ -> ChromeDriver.exe
+ -> FirefoxDriver.exe 
+ -> IEDriver.exe
+src/test/java
+ -> autodesk.OrganizationsTests
+ -> autodesk.ContactsTests
+src/test/resources
+ -> commonData.properties
+ -> TestData.xlsx
+pom.xml
+ -> Dependencies
+ -> plugins
+
+-> pom.xml: 
+   -> Its called Project Object Model or Project Configuration file
+   -> Its the heart of any maven project
+   -> Its created only once during the project creation
+   -> If pom.xml is corrupted, then we have to discard the entire project and create another
+   -> The components of pom.xml are dependencies and Plugins.
+
+-> Dependencies in Maven
+   -> Dependency is advance feature in maven which is used to get all the required 
+      jars from the Global repository(http://mvnrepository.com) to Local repository
+      (C://user/name/.m2) & attach all jars to the project automatically.    
+
+2. Maven Cmd Line Plugin:
+   This is a Maven software which helps us to run the maven project without eclipse.
+   we have to download Maven to local system and set the environment variables.
+   To check if its set properly:
+
+=> Build Life Cycle/maven Life cycle:
+a. mvn clean:   Its a maven command used to clean all the old reportes from target folder
+b. mvn validate:Its a maven command used to check if all the necessary jar are downloaded
+                for all the dependencies added, if not it will automatically download
+c. mvn compile: Its maven command to will chcek the compilation issues in the framework
+d. mvn test:    Its a maven command which will identify all the test classes whose class name
+                end with "test" and execute them.
+
+=> To execute the test script in command line:
+1. Go to the current project location where pom.xml file is present in your local system.
+2. invoke command prompt from project location
+3. execute the maven life cycle commands and verify
+
+=> mvn test:- 
+   - At class level, if no testNg.xml file is there
+     All the classes in the project whose name end with "test" will get executed
+
+=> To run specific test class through cmd line: mvn -Dtest=className test
+   - It will navigate to project location compare all the test class name with 
+     the name given in the command if its matching it will execute
+   - Here -D stands for data , if we want pass any data through maven command we use -D.
+   - whenever we want load particular class name -Dkey=value syntax should be followed
+     and key is always test nad value can be any class name
+     ex: mvn -Dtest=OrganizationTest test
+
+=> To run a spefic test method / @Test inside a particular class
+   - when a test class consists of multiple test methods/@Test and we have run 
+     particular test method then we make use of # and specify the method name
+
+=> To pass data from cmd line: Maven Parameters
+   - When we get a situation to provide run time parameters, then we have to use Maven 
+     parameters. 
+   - Using maven paramters we can pass any data during the run time. 
+
+Question: How do you read data from cmd line to your test script?
+       => We have to make use of Maven parameters, like -Dkey=Value
+          what ever data we want to provide like browser name, username, password url etc
+          we can provide with the below command.
+
+Question: Why do you have to read data from cmd Line?
+       => Sometimes we can get a situation where the customer would want to execute the test 
+          test script with different browser, or in different environment or with different
+          credentials, so since customer cannot go and make changes in the framework, we 
+          provide an option in the framework to accept run time parameters so that we can 
+          pass the data using maven parameters.
+
+=> To run any TestNG.xml file (suite xml file) through pom.xml: Surefire Plugin.
+   -> In reality we will be having various suite xml files for every execution type like
+      testNG-Batch.xml ---------------------To run all the test classes sequentially
+      testNG-SmokeSuite.xml ----------------To run only smoke scenarios
+      testNG-RegressionSuite.xml -----------To run only regression scenarios
+      testNG-RegionalRegressionSuite.xml ---To run only impacted test script
+      testNG-DistributedParallelSuite.xml --To run Batch in multiple threads
+      testNG-CrossBrowserExecution.xml -----To run same set of scripts in different browsers
+   -> So we cannot run the test scripts class wise, we have to run the test script based
+      on suite xml files 
+   -> Also by mistake if any class name is not ending with "test", then maven will not 
+      identify it as a test class and do not include it in "mvn test".
+   -> hence to load testng.xml file we make use of a plugin called as "SUREFIRE"
+   -> SureFire plugin will load the relevent testNG.xml file in <suiteXmlFile> and this
+      testNG.xml file is recognised by maven while executing mvn test.
+
+=> To run specific suite xml file when there are multiple suite xml file: Maven Profiling
+   -> SureFire plugin allow us to read testNG.xml via pom.xml.
+   -> If we have to load different testNg.xml file then we have make changes in surefire
+      plugin <suiteXmlFile> which is not recommended as many times making changes in pom.xml
+      might corrupt the pom.xml file. If it happen then we have discard the entire project.
+   -> Hence we will create a seperate profile for every suite xml file in pom.xml
+      and in maven cmd we will call the specific profile by its profile id.
+      maven cmd is :
+      -> mvn test -P profileId --> here -P stands for profile.
+
+=> NOTE: A seperate profile for testNg-Failed.xml file will also be created to run only
+         the failed test scripts.
+         -> mvn test -P Fail
+
+=> Advantages of MAVEN
+a.  Check the integration & compilation issue between the framework component whenever 
+    multiple engineer working with same framework, their might be possibilities one engineer 
+    modification, addition & deletion Might affect the entire build 
+b.  handle dependencies jars
+c.  Create framework configuration quick setup for new engineers (because all the required 
+    dependencies jar. Versions declared in POM.xml, you just to get the framework from the 
+    GIT & save the POM file 
+d.  provide framework folder structure
+e.  we can run the test script in command Line without Eclipse
+f.  Which is used to check framework build is broken or not ?
+g.  Maven majorly support in Jenkins  for CD/CI[Jenkins]
+h.  Maven also support Profiling (we can have multiple testing.xml file in one Project, 
+    so that we go for Profile to execute specific xml file via CMD)
+i.  Maven also support Command Line parameters
+
+
+
+
+

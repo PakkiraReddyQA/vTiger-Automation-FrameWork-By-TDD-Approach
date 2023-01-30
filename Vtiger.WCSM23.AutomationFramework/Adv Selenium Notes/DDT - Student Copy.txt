@@ -1,0 +1,58 @@
+  
+
+Data Driven Testing: Automation rule says never hard code any data
+                     Store the required data in any external resources and read that in the test 
+                     test script
+-> Common Data: data which is common to all the test scripts like url, username, 
+                passowrd, browser name.
+                -> Property File is more prefered
+                -> Property File is light weight
+                -> property file stores the data in key value pair
+                -> Easy to read the data
+                -> Disadvantge :Not organised hence its preffered only for small amount of data
+-> Test Data: data which is specific to only to the test case like 
+              Create Organization -- Organization name
+              Create Contact -- Contact name
+              Create Contact With Organization -- Contact Name and Organization name
+              -> To store test data we prefer Excel sheet
+              -> excel sheet stores data in the form of rows and columns
+              -> Data is stored in a well organised way so that data retrieval becomes easy
+              -> Data maintainace is easy 
+              -> Disadvantage is excel sheet is slow comapared to property File
+
+
+9-http://localhost:8888
+
+Scenario 1:
+Login to App
+Navigate to Organizations
+Create new Organization with mandatory details
+Save and logout
+
+Scenario 2:
+Login to App
+Navigate to Contacts
+Create new contact with mandatory details
+Save and logout
+
+Scenario 3: 
+Login to Vtiger App
+Navigate to Organizatios link
+Create organization with mandatory fields
+Choose Healthcare in the Industry dropdown
+save and logout.
+
+Scenario 4:
+Login to App 
+Navigate to Organizations
+Create Organization with mandatory fields
+Choose Electronics in industry drop down
+Choose Investor in Type drop down
+save and logout
+
+Scenario 5:
+Login to App 
+Navigate to Contacts
+Create Contact with mandatory fields
+Choose any existing organization
+save and logout

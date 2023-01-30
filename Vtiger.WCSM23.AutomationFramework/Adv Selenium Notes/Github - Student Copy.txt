@@ -1,0 +1,106 @@
+ GITHUB
+=> Definition: It’s a distributed cloud decentralized repository where we can maintain our 
+               sourceCode / Automation Framwork / CRS doc /build of the application in one place
+
+=> Softwares involved in Github
+There are 2 Software in GitREpository
+1. Git HUB:- Cloud based repository(software), which is used maintain the source code 
+             in one place, in order to use it just create an account with 
+             https://github.com
+2. Git [Git client]:- it’s a software should installed in client machine , which is 
+                      used to communicate to  GITHUB
+                      EG : EGit:- Eclipse Git, Installed with Eclipse, we can execute git 
+                                  commands through eclipse.
+                           GitDeskTop/GitBash:- Should be installed externally to execute git 
+                                                commands through cmd line
+=> Advantages of GitHub Cloud
+1. Since its cloud based repository , no need have maintenance team  to maintain the  
+   Software / HardWare
+2. Cloud means pay rent for what you use 
+3. Cloud software always access via internet
+4. Cloud System / sever physically not present within the Organization, but present 
+   virtually    
+5. Initial investment is not required for Software/ Physical location 
+6. Scale UP / Scale Down is easy 
+7. File Share between the team members is easier
+8. It provides remote access, it means anywhere contributors can access via internet
+9. Provide History for changes made by users & backup facility 
+10. GitHub also provide platform to review [pull request] the Code of Automaton test scripts  
+11. GitHub Also handle the conflict’s 
+12. Jenkins Always get the latest framework from the Git for batch Execution
+
+=> Why Git is Decentralized Repository?  
+-> There are Three stages in Git, start with "Working Diretory"->Local Repo->Global Repo
+
+=> Usage of github at different stages:
+1. Developers use github for: storage of source code
+2. DevOps use github for: storage of build versions
+3. Manual Testers use github for: storage of CRS and Manual test cases.
+4. Automation Testers use github for: storage of Framework
+
+=> Basic Git commands:
+1. commit: commit will copy the framework from working directory to local repository 
+           (.git folder created inside the project parent folder)
+2. Push: push will copy the framework from local repository or .git folder to github global 
+         repository with URL and Username and Password/Token
+3. Import+Clone URI: Import will get the framework from global repository to the local systems
+                     clone URI will create a folder in the same name as the framework URL in 
+                     local system, which act as local repository for further push actions.
+4. Pull: Pull will help us to get the changes pushed into the framework. we can use pull
+         only if the project is existing in the working directory ie.. it should be already
+         imported. Only imported projects can be pulled. 
+5. Merge: Merge command will be merge one branch at a time with the master
+6. Fork: Fork is a command which will create a copy of repository from different github account into your
+         github account.
+7. Rebase: when there a multiple branches existing to be merged, we can use rebase to merge 
+           all the branches at a time with the master.
+8. Pull Request: Its a intimation given by the automation tester who creates a branch to push
+                 the code to the manager/ team lead saying a new branch has been created.
+                 Later the manager will look into the branch, analyse the code/changes
+                 if there are no conflicts he will review and merge it into the master branch
+                 of the framework.
+
+=> What is Git conflict?
+-> When two or more engineers try to make changes in the same repository simultaneously, 
+   the first user trying to push the code will not face any issue, but when the second 
+   user is trying to push the code, github will throw conflict. which means, github thinks 
+   the second user is not aware of the changes made by the first user hence it gives conflict and doesnot 
+   allow second user to push.
+-> When there is a conflict, github will not accept the push, it will give rejection msg.
+
+=> How to avoid Git Conflicts?
+   1. Pull before Push.
+   2. Use branches to push.
+
+=> How to resolve Git conflict?
+-> 1. Pull the code first before pushing
+   2. Remove all unwanted comments 
+   3. Analyse the code pushed by others, 
+   4. Then push it.
+
+=> What is branching in github?
+-> Everytime a new engineer joins the team, he will not be given collaborator right into 
+   the master branch of the framework without which he cannot push the code which he has 
+   written but he can pull the changes which others have written. So in order to push his
+   code, we prefer to push in seperate branch and any senior tester will review it and
+   merge it into the master framework 
+-> Branching avoids unneccessary conflicts
+-> Branching avoids codes written by new engineers which might affect the existing Framework
+-> Branching makes sure that the master copy is safe from the unreviewd changes.
+-> All the engineers will push their code in their branch and create a pull request to the
+   manager/ senior tester to review and merge it to master.
+-> The code present in master is only avaliable for pulling for all automation tester.
+  
+=> What is pull Request?
+-> Its a intimation given by the automation tester who creates a branch to push the code 
+   into the branch to the manager/ team lead saying a new branch has been created.
+-> Manager will get this intimation when ever any new branch has been created.
+-> Later the manager will look into the branch, analyse the code/changes if there are 
+   no conflicts he will review and merge it into the master branch of the framework.
+
+
+
+ 
+
+
+

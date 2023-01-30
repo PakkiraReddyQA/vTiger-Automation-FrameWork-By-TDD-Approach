@@ -1,0 +1,135 @@
+JENKINS
+-> Jenkins is a CI/CD Tool used by Developers, DevOps and Automation Testers.
+-> CI -> Continous Integration
+   CD -> Continous Development
+      -> Continous Deployment
+      -> Continous Delivery
+
+=> Basically Jenkins automates 
+   -> Process of build creation - Continous development
+   -> Process of installing the build into testing environment - Continous deployment
+   -> Process of checking the integration issues between old feature and new features
+      - continous integration 
+   -> Process of delivering the tested the build to the production environment
+      - Continous delivery
+
+=> Why Jenkins is required in development?
+
+-> Continiuos devlopment : continious monither the git source code repository & create a 
+                           new build if any changes happened in the git source code 
+-> Continiuos deployment : get the latest build from git location & deploy the build in 
+                           to testing environment
+-> Continiuos Develivery : get the latest build from git location & deploy the build in to 
+                           UAT environment/Production environment 
+
+=> Why Jenkins is required in Automation?
+
+-> Continious Intergration : Continous execution of the selenium test scripts in testing 
+                             environment to check the integration issues. 
+  
+-> Automation Engineers used Jenkins For Continous Integration
+   Continous Integration means checking the integration issues bewteen the old build and
+   the new feature by executing the old framework. if the test scripts get failed, then 
+   with the failure we will get to know the impact of new feature on the old build. hence
+   we can analyse the failure, debug the failed test scripts, if any product issues/bugs 
+   are found we will rise the defect in jira, if its a test script issue we will correct it
+   update the framework and re run the framework.
+
+=> Jenkins Configuration
+   -> Login to Jenkins
+   -> Set path for jdk, git,Maven.
+
+=> Parameters in Jenkins:
+   -> Jenkins also supports parameters but internally its maven parameter only
+   -> We use $ for specifying Jenkins parameter
+   -> Choice parameters provide multiple choices for data that can be choosen during the 
+      execution.
+   -> Using jenkins parameter in goal
+      -Dbrowser=$browser -Dusername=Chaitra -Durl=$url test
+   -> Here browser and url can be choosen during build now action.
+   -> Why jenkins parameters required?
+      Sometimes customer might want to execute the job with different browser or in different
+      environment, since customer cannot make changes in framework, we provide choice 
+      parameters so that it gives a drop down of different choices given like different
+      browser names, different environment, customer can easily choose from drop down and 
+      execute the job. No coding knowledge needed to run the job.
+
+=> scheduling Job in Jenkins:
+   Scheduling decides when the job execution should be triggered or started.
+   There are 3 types of Scheduling in Jenkins:
+   -> On Demand
+   -> On schedule
+   -> Poll SCM
+
+1. On Demand scheduling:
+   -> When ever the customer demands the execution, we will trigger the execution with 
+      Build Now option available.  
+   -> There is no stipulated times for execution, when ever customer demands, we can run
+   -> Build Now is the action performed for On demand scheduling.
+
+2. On Schedule scheduling:
+   -> Specifying the exacy time duration of when the execution should start is called on 
+      schedule scheduling.
+   -> While configuring the job only we have to provide "build periodically" in 
+      Build Triggers.
+   -> Jenkisn follow a specific scheduling format
+
+      MINUTE  HOUR   DOM    MONTH   DOW
+      (0-59) (0-23) (1-31) (1-12)  (0-7)-> 0,7=sunday
+
+      # Every tuesday at 12pm
+        H   12   *  *  *    -> Here "H" means hash -> specifies "any", "*" specifies "every"
+      # Every fifteen minutes (perhaps at :07, :22, :37, :52):
+	H/15 * * * *
+      # Every ten minutes in the first half of every hour 
+	H(0-29)/10 * * * *
+      # Once every two hours at 45 minutes past the hour starting 
+        45 9-16/2 * * 1-5
+      # Once in every two hour slot between 8 AM and 4 PM every weekday
+	H H(8-15)/2 * * 1-5
+      # Once a day on the 1st and 15th of every month except December
+        H H 1,15 1-11 *
+
+   -> On Schedule does not bother if the framework is updated or not, it will start the 
+      execution immediately in the specified time schedule.
+
+3. Poll SCM:
+   -> Poll SCM will detect the changes made in specified git location (SCM- Source Code
+      management) and it will start the execution on the scheduled time.
+   -> Here the schedule will be usually 
+      H * * * * 
+   -> When ever any changes is detected like new  push /commit it will trigger the job.
+   -> When we make any changes in the framework, it has to pushed into git master repo 
+      or if its pushed into any branches then it has to be reviewed and merged into the 
+      master. 
+   -> Usually Master repo of the framework will be configured with Jenkins and if any
+      new commit is recognised, Jenkins will start the execution based on schedule.
+
+=> Pipelining in Jenkins:
+   -> Pipelining means creating dependency between multiple jobs.
+   -> If one job is triggered it will be executed and the status of this job will 
+      automatically trigger the next job.
+   -> Usually the previous job is called Upstream job and the next job is called 
+      downstream job.
+   -> Build creation(Job 1)->Smokesuite(job 2)->RegressionSuite(job 3) these are the 3 jobs
+      which will be in pipeline
+   -> Even though we create pipelining for jobs during job configuration, we have to check 
+      the inidividual jobs to make sure wheather they are executing or not as there is no 
+      view to showcase all the jobs running in pipeLine.
+   -> hence we use "Build PipeLine Plugin" to see pipeline view, where all the jobs which 
+      are in pipeline are visible at once. 
+
+=> Advantages of Jenkins:
+a. Jenkins Provide 3 level of execution 
+   - On demand    : based on Customer demand we can start the execution
+   - On Scheduling: based on scheduled time , start the execution automatically
+   - POOL SCM     : where continuously monitor the SCM(GitHub) & automatically start the 
+                    execution whenever we get new Build / one new test script is getting added
+                    to Git.  
+b. Email Notification:
+   - Jenkins sends out an execution Report via email, once execution is completed
+   - Jenkins also Send Build broken Email, when Compilation issue between the 
+     framework component 
+c. Jenkins also support run time parameter
+d. Jenkins also support PipleLines Job
+

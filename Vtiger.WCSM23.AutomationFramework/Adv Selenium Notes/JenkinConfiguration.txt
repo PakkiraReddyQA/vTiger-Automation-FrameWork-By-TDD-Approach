@@ -1,0 +1,13 @@
+Jenkins Configuration:
+
+JDK
+
+C:\Program Files\Java\jdk-17.0.5
+
+Maven
+
+D:\AdvancedSeleinum\apache-maven-3.8.7
+
+Git
+
+C:\Program Files\Git\bin\git.exe
