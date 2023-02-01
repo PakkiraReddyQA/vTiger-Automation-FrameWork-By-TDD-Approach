@@ -32,8 +32,8 @@ public class BaseClass {
 	{
 		System.out.println("====Data Base connected successfully======");
 	}
-//	@Parameters("browser")
-	@BeforeClass(groups = {"smokesuite","regressionSuite"})
+     //	@Parameters("browser")
+	  @BeforeClass(groups = {"smokesuite","regressionSuite"})
 	public void bcConfiguration(/*String BROWSER*/) throws Exception
 	{
 		//Launch the browser
