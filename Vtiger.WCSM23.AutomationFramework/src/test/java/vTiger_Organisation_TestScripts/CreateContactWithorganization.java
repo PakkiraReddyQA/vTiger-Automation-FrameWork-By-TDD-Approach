@@ -50,6 +50,7 @@ public class CreateContactWithorganization extends BaseClass{
 	 //step11:validation for contact
 	 String contactHeader = driver.findElement(By.className("dvHeaderText")).getText();
 		Assert.assertTrue(contactHeader.contains(LASTNAME));
+		Assert.fail();
 
 	 
 	}
