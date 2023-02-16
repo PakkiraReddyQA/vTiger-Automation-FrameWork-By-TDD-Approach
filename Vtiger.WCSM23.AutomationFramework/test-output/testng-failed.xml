@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustry">
+      <class name="vTiger_Practice.SampleJDBCExecuteUpdate">
         <methods>
-          <include name="craeteOrgWithIndustry"/>
-          <include name="bsConfiguration"/>
-          <include name="bcConfiguration"/>
-          <include name="acConfiguration"/>
-          <include name="asConfiguration"/>
-          <include name="amConfiguration"/>
-          <include name="bmConfiguration"/>
+          <include name="sampleUpdate"/>
         </methods>
-      </class> <!-- vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustry -->
+      </class> <!-- vTiger_Practice.SampleJDBCExecuteUpdate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
