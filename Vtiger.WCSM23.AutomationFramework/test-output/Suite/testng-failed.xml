@@ -8,7 +8,9 @@
           <include name="bsConfiguration"/>
           <include name="bcConfiguration"/>
           <include name="test4"/>
+          <include name="test2"/>
           <include name="acConfiguration"/>
+          <include name="test3"/>
           <include name="asConfiguration"/>
           <include name="amConfiguration"/>
           <include name="bmConfiguration"/>

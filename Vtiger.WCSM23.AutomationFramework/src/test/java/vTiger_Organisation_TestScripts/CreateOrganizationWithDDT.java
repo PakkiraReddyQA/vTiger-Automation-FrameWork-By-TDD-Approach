@@ -13,19 +13,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import vTiger_genericutility.Iconstant;
 @Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
 public class CreateOrganizationWithDDT {
-	public static void main(String[] args) throws Exception {
+	@Test
+	public void ddt() throws Exception {
 		Random r=new Random();
 		int random = r.nextInt();
 		
 		//Step1:read the data from property file
-		FileInputStream fisp=new FileInputStream(".\\src\\test\\resources\\CommonData.properties");
+		FileInputStream fisp=new FileInputStream(Iconstant.PropertyFilePath);
 		Properties posp=new Properties();
 		posp.load(fisp);
 		String USERNAME = posp.getProperty("username");
@@ -45,7 +49,9 @@ public class CreateOrganizationWithDDT {
 		 if(BROWSER.equalsIgnoreCase("chrome"))
 		 {
 			 WebDriverManager.chromedriver().setup();
-			 driver=new ChromeDriver();
+			 ChromeOptions options=new ChromeOptions();
+			 options.addArguments("--remote-allow-origins=*");
+			 driver=new ChromeDriver(options);
 		 }
 		 else if(BROWSER.equalsIgnoreCase("FireFox"))
 		 {

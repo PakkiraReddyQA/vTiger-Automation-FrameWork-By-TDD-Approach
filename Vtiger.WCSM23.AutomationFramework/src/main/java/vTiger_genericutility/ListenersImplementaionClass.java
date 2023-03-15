@@ -9,7 +9,6 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.ReportStats;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -22,21 +21,18 @@ public class ListenersImplementaionClass implements ITestListener{
 ExtentReports reports;
 ExtentTest test;
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
 		String methodName = result.getMethod().getMethodName();
-		test=reports.createTest(methodName);
+		test=reports.createTest(methodName);//Monitor The TestScript
 		test.log(Status.INFO, "=====Execution started===="+methodName);
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
 		String methodName = result.getMethod().getMethodName();
 		test.log(Status.PASS,"==TestScript PASS=="+methodName);
 		
 	}
 
 	public void onTestFailure(ITestResult result) {
-		//Create Objects for required we can extend BaseClass
 		WebDriverUtility wUtil=new WebDriverUtility();
 		JavaUtility jUtil=new JavaUtility();
 		
@@ -56,11 +52,9 @@ ExtentTest test;
 		{
 			e.printStackTrace();
 		}
-		
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
 		String methodName = result.getMethod().getMethodName();
 		test.log(Status.SKIP, "--test script skipped--"+methodName);
 		test.log(Status.SKIP, result.getThrowable());
@@ -68,27 +62,27 @@ ExtentTest test;
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onTestFailedWithTimeout(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
 		
 //		System.out.println("======Suite Execution started======");
-		ExtentSparkReporter htmlReport=new ExtentSparkReporter(".\\ExtentReports\\Rport-"+new JavaUtility().getSystemDateformat()+".html");
+		//Basic Configuration for Extent Reports
+		ExtentSparkReporter htmlReport=new ExtentSparkReporter(".\\ExtentReports\\Report-"+new JavaUtility().getSystemDateformat()+".html");
 		htmlReport.config().setDocumentTitle("Vtiger Execution Reports");
 		htmlReport.config().setReportName("Vtiger Execution Report");
 		htmlReport.config().setTheme(Theme.DARK);
-		
+		//Actual Report for System Information in ExtentReport
 		reports=new ExtentReports();
 		reports.attachReporter(htmlReport);
-		reports.setSystemInfo("Base URL", "https://localhost:8888");
+		reports.setSystemInfo("Base URL", "http://localhost:8888");
         reports.setSystemInfo("BaseBrowser", "Chrome");
         reports.setSystemInfo("Base platform", "windwos");
         reports.setSystemInfo("ReporterName", "Pakkira Reddy");
@@ -96,7 +90,6 @@ ExtentTest test;
 	}
 
 	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
 		System.out.println("====suite Execution finished======");
 		reports.flush();//it will tell to extentreports ,,,execution completed ...you can generate report
 	}

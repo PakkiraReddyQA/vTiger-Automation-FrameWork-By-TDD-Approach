@@ -2,6 +2,7 @@ package vTiger_genericutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -42,7 +43,9 @@ public class BaseClass {
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver(options);
 			System.out.println("===="+BROWSER+"====Launched succefully===");
 			sdriver=driver;//this is used for  take screen shot in listeners
 		}

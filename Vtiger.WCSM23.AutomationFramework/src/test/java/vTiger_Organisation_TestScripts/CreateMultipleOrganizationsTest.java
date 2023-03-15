@@ -16,9 +16,6 @@ import vTiger.ObjectReposotary.OrganizationPage;
 import vTiger_genericutility.BaseClass;
 @Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
 public class CreateMultipleOrganizationsTest extends BaseClass {
-	
-
-	
 	@Test(dataProvider = "orgNames")
 	public void createMultipleorgTest(String ORG,String INDUSTRY) throws Exception
 	{
@@ -53,8 +50,5 @@ public class CreateMultipleOrganizationsTest extends BaseClass {
 	{
 		Object[][] data=eUtil.readmultipleDatafromExcel("multipleOrgs");
 		return data;
-		
 	}
-	
-	
 }
