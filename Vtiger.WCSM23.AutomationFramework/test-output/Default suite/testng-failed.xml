@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webTablesHandling.GopiPagadala">
+      <class name="linksChecking.LinksCheckingwithVtiger">
         <methods>
-          <include name="gp"/>
+          <include name="bsConfiguration"/>
+          <include name="bcConfiguration"/>
+          <include name="linksVerification"/>
+          <include name="acConfiguration"/>
+          <include name="asConfiguration"/>
+          <include name="amConfiguration"/>
+          <include name="bmConfiguration"/>
         </methods>
-      </class> <!-- webTablesHandling.GopiPagadala -->
+      </class> <!-- linksChecking.LinksCheckingwithVtiger -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

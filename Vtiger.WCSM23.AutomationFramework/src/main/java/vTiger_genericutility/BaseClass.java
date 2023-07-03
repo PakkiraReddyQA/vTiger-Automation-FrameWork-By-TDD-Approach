@@ -7,9 +7,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,19 +23,20 @@ import vTiger.ObjectReposotary.LoginPage;
  *
  */
 public class BaseClass {
-	public PropertiesFileUtility pUtil=new PropertiesFileUtility();
-	public ExcelFileUtility eUtil=new ExcelFileUtility();
-	public JavaUtility jUtil=new JavaUtility();
+	public  PropertiesFileUtility pUtil=new PropertiesFileUtility();
+	public  ExcelFileUtility eUtil=new ExcelFileUtility();
+	public  JavaUtility jUtil=new JavaUtility();
     public 	WebDriverUtility wUtil=new WebDriverUtility();
-	public WebDriver driver=null;
-	public static WebDriver sdriver;//this is used for  take screen shot 
+	public  WebDriver driver=null;
+	public  static WebDriver sdriver;//this is used for  take screen shot 
 	
 	@BeforeSuite(groups = {"smokesuite","regressionSuite"})
 	public void bsConfiguration()
 	{
 		System.out.println("====Data Base connected successfully======");
 	}
-     //	@Parameters("browser")
+//	@BeforeTest
+     // @Parameters("browser")
 	  @BeforeClass(groups = {"smokesuite","regressionSuite"})
 	public void bcConfiguration(/*String BROWSER*/) throws Exception
 	{
@@ -43,9 +46,9 @@ public class BaseClass {
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options=new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
-			driver=new ChromeDriver(options);
+//			ChromeOptions options=new ChromeOptions();
+//			options.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver();
 			System.out.println("===="+BROWSER+"====Launched succefully===");
 			sdriver=driver;//this is used for  take screen shot in listeners
 		}
@@ -82,6 +85,7 @@ public class BaseClass {
 		hp.logoutofApp(driver);
 		System.out.println("application loggedOut successfully");
 	}
+//	@AfterTest
 	@AfterClass(groups = {"smokesuite","regressionSuite"})
 	public void acConfiguration()
 	{

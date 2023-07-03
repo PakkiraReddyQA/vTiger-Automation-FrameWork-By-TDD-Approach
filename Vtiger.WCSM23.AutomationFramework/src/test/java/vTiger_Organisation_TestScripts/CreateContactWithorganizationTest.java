@@ -12,7 +12,8 @@ import vTiger.ObjectReposotary.HomePage;
 import vTiger.ObjectReposotary.OrganizationInfoPage;
 import vTiger.ObjectReposotary.OrganizationPage;
 import vTiger_genericutility.BaseClass;
-@Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
+
+@Listeners(vTiger_genericutility.ListnersImplentation.class)
 
 public class CreateContactWithorganizationTest extends BaseClass{
 	@Test(groups = "smokesuite")

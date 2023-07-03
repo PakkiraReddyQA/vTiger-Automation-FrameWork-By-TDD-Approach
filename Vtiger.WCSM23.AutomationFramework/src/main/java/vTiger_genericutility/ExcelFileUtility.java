@@ -55,9 +55,7 @@ public class ExcelFileUtility {
 		
 		FileOutputStream fos=new FileOutputStream(Iconstant.ExcelSheetFilepath);
 		book.write(fos);
-		book.close();
-		
-		
+		book.close();	
 	}
 	/**
 	 * this method will read multiple data from excel sheet return the data

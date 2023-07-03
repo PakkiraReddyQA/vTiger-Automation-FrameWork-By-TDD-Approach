@@ -43,7 +43,6 @@ public class CreateMultipleOrganizationsTest extends BaseClass {
 		 {
 			 System.out.println("FAIL");
 		 }*/
-		
 	}
 	@DataProvider(name="orgNames")
 	public  Object[][] getData() throws EncryptedDocumentException, IOException

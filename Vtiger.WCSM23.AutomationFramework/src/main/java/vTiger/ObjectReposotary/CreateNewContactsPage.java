@@ -72,14 +72,5 @@ public class CreateNewContactsPage extends WebDriverUtility {
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
 		switchTowindow(driver, "Contacts");
 		saveBtn.click();
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-
 }

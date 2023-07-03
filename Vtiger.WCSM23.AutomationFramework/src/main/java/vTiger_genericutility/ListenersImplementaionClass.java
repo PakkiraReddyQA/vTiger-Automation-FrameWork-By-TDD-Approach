@@ -43,15 +43,16 @@ ExtentTest test;
 		test.log(Status.FAIL, result.getThrowable());
 		
 		String screenshotName = methodName+"-"+jUtil.getSystemDateformat();
-		try 
+		try
 		{
 			String path = wUtil.takescreenshot(BaseClass.sdriver, screenshotName);
 			test.addScreenCaptureFromPath(path);
-		} 
-		catch (IOException e) 
-		{
+		}
+		catch (Exception e) {
+					
 			e.printStackTrace();
 		}
+		
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -89,7 +90,9 @@ ExtentTest test;
 		
 	}
 
-	public void onFinish(ITestContext context) {
+	public void onFinish(ITestContext context) 
+	{
+		
 		System.out.println("====suite Execution finished======");
 		reports.flush();//it will tell to extentreports ,,,execution completed ...you can generate report
 	}

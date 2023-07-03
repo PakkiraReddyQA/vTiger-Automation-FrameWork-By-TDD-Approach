@@ -78,7 +78,6 @@ public class CreateContactWithOrganizationPOMTest extends BaseClass{
 	public void test4()
 	{
 		System.out.println("test4");
-	
 	}
 	
 }
