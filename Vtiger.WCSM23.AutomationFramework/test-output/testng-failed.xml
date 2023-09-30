@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="linksChecking.LinksCheckingwithVtiger">
+      <class name="testPractice2.CalenderPopupPractice">
         <methods>
-          <include name="bsConfiguration"/>
-          <include name="bcConfiguration"/>
-          <include name="linksVerification"/>
-          <include name="acConfiguration"/>
-          <include name="asConfiguration"/>
-          <include name="amConfiguration"/>
-          <include name="bmConfiguration"/>
+          <include name="jdbc"/>
         </methods>
-      </class> <!-- linksChecking.LinksCheckingwithVtiger -->
+      </class> <!-- testPractice2.CalenderPopupPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

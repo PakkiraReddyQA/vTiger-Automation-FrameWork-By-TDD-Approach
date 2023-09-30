@@ -19,7 +19,6 @@ public class CreateContactWithorganizationTest extends BaseClass{
 	@Test(groups = "smokesuite")
 	public void createContactWithOrg() throws Exception
 	{
-		
 		/*read data from excel sheet*/
 		String LASTNAME = eUtil.readDatafromExcel("contacts", 7, 2);
 		String ORGNAME = eUtil.readDatafromExcel("contacts", 7, 3)+jUtil.getRandomNumber();
@@ -46,7 +45,7 @@ public class CreateContactWithorganizationTest extends BaseClass{
 		//step7:create new contact with org name
 		CreateNewContactsPage cp1=new CreateNewContactsPage(driver);
 		cp1.createNewContact(driver, LASTNAME, ORGNAME);
-	 //step8:validation for contact
+	    //step8:validation for contact
 		ContactstInfoPage cip=new ContactstInfoPage(driver);
 		String contactHeader = cip.contactHeaderText();
 		Assert.assertTrue(contactHeader.contains(LASTNAME));	 

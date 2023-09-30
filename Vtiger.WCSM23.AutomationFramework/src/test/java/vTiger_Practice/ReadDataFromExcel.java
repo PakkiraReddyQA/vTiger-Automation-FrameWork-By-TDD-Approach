@@ -28,5 +28,7 @@ public static void main(String[] args) throws Exception {
 	//step7: print the value in eclipose
 	System.out.println(value);
 	
+	//String value1 = wb.getSheet("sheet").getRow(1).getCell(2).getStringCellValue();
+	
 }
 }

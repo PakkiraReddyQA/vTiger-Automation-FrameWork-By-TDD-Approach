@@ -3,7 +3,6 @@ package vTiger_genericutility;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-
 public class PropertiesFileUtility {
 	public String readDataFromPropertyFile(String key) throws Exception
 	{

@@ -23,6 +23,7 @@ import vTiger.ObjectReposotary.LoginPage;
  *
  */
 public class BaseClass {
+	
 	public  PropertiesFileUtility pUtil=new PropertiesFileUtility();
 	public  ExcelFileUtility eUtil=new ExcelFileUtility();
 	public  JavaUtility jUtil=new JavaUtility();
@@ -45,7 +46,7 @@ public class BaseClass {
 		String URL = pUtil.readDataFromPropertyFile("url");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
 //			ChromeOptions options=new ChromeOptions();
 //			options.addArguments("--remote-allow-origins=*");
 			driver=new ChromeDriver();
@@ -54,7 +55,8 @@ public class BaseClass {
 		}
 		else if(BROWSER.equalsIgnoreCase("Firfox"))
 		{
-			WebDriverManager.firefoxdriver().setup();
+			
+//			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 			System.out.println("===="+BROWSER+"====Launched succefully===");
 			sdriver=driver;//this is used for  take screen shot in listeners

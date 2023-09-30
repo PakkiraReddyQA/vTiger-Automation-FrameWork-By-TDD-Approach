@@ -8,7 +8,9 @@ import java.sql.Statement;
 
 import org.testng.annotations.Test;
 
-import com.mysql.cj.jdbc.Driver;
+import com.mysql.jdbc.Driver;
+
+
 
 public class SampleJDBCExecuteQuery {
 	@Test
@@ -37,6 +39,8 @@ public class SampleJDBCExecuteQuery {
 	@Test
 	public void sampleJdbcPractice() throws SQLException
 	{
+
+	
 		Driver driverRef=new Driver();
        //Step1:Register the Driver
 		DriverManager.registerDriver(driverRef);

@@ -16,7 +16,7 @@ public class CreateNewOrganizationWithIndustryPOMTest extends BaseClass {
 	
 	@Test
 	public void createNewOrgWithIndustry() throws Exception
-	 {
+	{
 		
 		//need to compoulsory this data for testing 
 		/*Step1:read data from the excel file*/
@@ -37,7 +37,5 @@ public class CreateNewOrganizationWithIndustryPOMTest extends BaseClass {
 		String ORGHEADER = orgf.orgnizationHeaderText();
 		//step6:Validation
 		Assert.assertTrue(ORGHEADER.contains(ORGNAME));
-		
 	}
-
 }

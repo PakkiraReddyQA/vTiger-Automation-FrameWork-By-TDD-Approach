@@ -128,6 +128,7 @@ public class WebDriverUtility {
 		Actions act=new Actions(driver);
 		act.doubleClick(element).perform();
 	}
+
 	/**
 	 * this method will perform right click actions anywhere in webpage
 	 * @param driver
