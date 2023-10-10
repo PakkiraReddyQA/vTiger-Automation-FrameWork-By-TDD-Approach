@@ -21,7 +21,7 @@ public class CreateNewOrganizationWithIndustryPOMTest extends BaseClass {
 		//need to compoulsory this data for testing 
 		/*Step1:read data from the excel file*/
 		String ORGNAME = eUtil.readDatafromExcel("Organization", 4, 2)+jUtil.getRandomNumber();
-		String INDUSTRY = eUtil.readDatafromExcel("Organization", 4, 3);
+		String INDUSTRY = eUtil.readDatafromExcel("multipleOrgs", 1, 1);
 	
 		//step2:navigate organization link
 		HomePage hp=new HomePage(driver);

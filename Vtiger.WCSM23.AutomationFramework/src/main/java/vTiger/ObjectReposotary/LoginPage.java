@@ -13,6 +13,8 @@ public class LoginPage {
 	@FindBy(name = "user_name")
 	private WebElement userNameEdt;
 	
+	
+
 	@FindBy(name = "user_password")
 	private WebElement passwordEdt;
 	
@@ -27,15 +29,19 @@ public class LoginPage {
 	}
 	//Rule5:provide getters to access the webElements
 	//utilization
+	
 	public WebElement getUserNameEdt() {
 		return userNameEdt;
 	}
+
 	public WebElement getPasswordEdt() {
 		return passwordEdt;
 	}
+
 	public WebElement getLoginButton() {
 		return LoginButton;
 	}
+	
 	//Business librarary-generic methods-for this applications
 	/**
 	 * this method login to application

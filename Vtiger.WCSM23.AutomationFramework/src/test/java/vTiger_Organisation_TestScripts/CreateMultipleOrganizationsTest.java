@@ -14,16 +14,24 @@ import vTiger.ObjectReposotary.HomePage;
 import vTiger.ObjectReposotary.OrganizationInfoPage;
 import vTiger.ObjectReposotary.OrganizationPage;
 import vTiger_genericutility.BaseClass;
-@Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
+//@Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
 public class CreateMultipleOrganizationsTest extends BaseClass {
-	@Test(dataProvider = "orgNames")
-	public void createMultipleorgTest(String ORG,String INDUSTRY) throws Exception
-	{
-		String ORGNAME = ORG+jUtil.getRandomNumber();
 	
+	@Test(dataProvider = "orgNames")
+	public void createMultipleorgTest(String ORG,String INDUSTRY,String student,int marks) throws Exception
+	{
+		
+		String ORGNAME = ORG+jUtil.getRandomNumber();
+		
+		String stud = student;	
+		System.out.println(stud);
+		
+		System.out.println(marks);
+	 
 		//step3:navigate to the organization link
 		HomePage hp=new HomePage(driver);
 		hp.clickonOrganizationsLink();
+		System.out.println("Clicked on org link");
 		//step4:click on create new orgnization img
 		OrganizationPage orgp=new OrganizationPage(driver);
 		orgp.clickOnOrganizationImg();
@@ -35,6 +43,7 @@ public class CreateMultipleOrganizationsTest extends BaseClass {
 		 String ORGHEADER = orgf.orgnizationHeaderText();
 		 
 		Assert.assertTrue(ORGHEADER.contains(ORGNAME));
+		
 		 /*if(ORGHEADER.contains(ORGNAME))
 		 {
 			 System.out.println(ORGHEADER+"--->PASS");
@@ -47,7 +56,7 @@ public class CreateMultipleOrganizationsTest extends BaseClass {
 	@DataProvider(name="orgNames")
 	public  Object[][] getData() throws EncryptedDocumentException, IOException
 	{
-		Object[][] data=eUtil.readmultipleDatafromExcel("multipleOrgs");
+		Object[][] data = eUtil.readmultipleDatafromExcelSheet("multipleOrgs");
 		return data;
 	}
 }

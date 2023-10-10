@@ -6,9 +6,10 @@
 	
 	
 	
-  <test thread-count="2" parallel="tests" name="Test-runner1">
+  <test thread-count="2" parallel="tests" name="smoke">
     <classes>
       <class name="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
+      <class name=""></class>
     </classes>
     </test> <!-- Test -->
     

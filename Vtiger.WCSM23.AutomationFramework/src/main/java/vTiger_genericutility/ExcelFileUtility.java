@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 public class ExcelFileUtility {
@@ -58,7 +59,7 @@ public class ExcelFileUtility {
 		book.close();	
 	}
 	/**
-	 * this method will read multiple data from excel sheet return the data
+	 * this method will read multiple data from excel sheet return the data if Nulls Are there it wont allow
 	 * @param sheetName
 	 * @return
 	 * @throws EncryptedDocumentException
@@ -70,7 +71,7 @@ public class ExcelFileUtility {
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheetName);
 		int lastRow = sh.getLastRowNum();
-		short lastCel =sh.getRow(0).getLastCellNum();
+		int lastCel =sh.getRow(0).getLastCellNum();
 		//Intialization
 		Object[][] data=new Object[lastRow][lastCel];
 		
@@ -97,5 +98,60 @@ public class ExcelFileUtility {
 		Sheet sh = book.getSheet(sheet);
 		int rowcount = sh.getLastRowNum();
 		return rowcount;
+	}
+	/**
+	 * this method will read multiple data from excel sheet return the data if Nulls also it should allow
+	 * @param sheetName
+	 * @return
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
+	public Object[][] readmultipleDatafromExcelSheet(String sheetName) throws EncryptedDocumentException, IOException
+	{
+		
+	 FileInputStream fis = new FileInputStream(Iconstant.ExcelSheetFilepath);
+	    Workbook wb = new XSSFWorkbook(fis);
+	    Sheet sh = wb.getSheet(sheetName);
+	    int lastRow = sh.getLastRowNum();
+	    int lastCell = sh.getRow(0).getLastCellNum();
+
+	    // Initialization
+	    Object[][] data = new Object[lastRow][lastCell];
+
+	    for (int i = 0; i < lastRow; i++) {
+	        Row row = sh.getRow(i + 1); // Start from the second row (index 1)
+
+	        if (row != null) {
+	            for (int j = 0; j < lastCell; j++) {
+	                Cell cell = row.getCell(j);
+	                if (cell != null) {
+	                    // Check the cell type to get the value correctly
+	                    switch (cell.getCellType()) {
+	                        case STRING:
+	                            data[i][j] = cell.getStringCellValue();
+	                            break;
+	                        case NUMERIC:
+	                            data[i][j] = cell.getNumericCellValue();
+	                            break;
+	                        // Handle other cell types as needed
+	                        default:
+	                            data[i][j] = null; // Set to null for unsupported types
+	                    }
+	                } 
+	                else
+	                {
+	                    data[i][j] = null; // Cell is null
+	                }
+	            }
+	        } else {
+	            // Row is null
+	            for (int j = 0; j < lastCell; j++) {
+	                data[i][j] = null;
+	            }
+	        }
+	    }
+
+	    fis.close();
+	    return data;
 	}
 }

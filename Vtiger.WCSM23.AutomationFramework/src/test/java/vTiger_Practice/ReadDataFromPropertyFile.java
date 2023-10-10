@@ -13,8 +13,11 @@ public class ReadDataFromPropertyFile {
 		pos.load(fis);
 		//Step4:provide the key and read the value
 		String URL = pos.getProperty("url");
+		
 		System.out.println(URL);
 		
+		String USERNAME = pos.getProperty("username");
+		System.out.println(USERNAME);
 		
 		String BROWSER = pos.getProperty("browser");
 		System.out.println(BROWSER);

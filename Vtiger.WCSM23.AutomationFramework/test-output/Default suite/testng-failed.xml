@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testPractice2.CalenderPopupPractice">
+      <class name="vTiger_Organisation_TestScripts.CreateMultipleOrganizationsTest">
         <methods>
-          <include name="jdbc"/>
+          <include name="bsConfiguration"/>
+          <include name="createMultipleorgTest"/>
+          <include name="bcConfiguration"/>
+          <include name="acConfiguration"/>
+          <include name="asConfiguration"/>
+          <include name="amConfiguration"/>
+          <include name="bmConfiguration"/>
         </methods>
-      </class> <!-- testPractice2.CalenderPopupPractice -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateMultipleOrganizationsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

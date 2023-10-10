@@ -1,4 +1,4 @@
-package vTiger_genericutility;
+	package vTiger_genericutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +23,7 @@ import vTiger.ObjectReposotary.LoginPage;
  *
  */
 public class BaseClass {
-	
+
 	public  PropertiesFileUtility pUtil=new PropertiesFileUtility();
 	public  ExcelFileUtility eUtil=new ExcelFileUtility();
 	public  JavaUtility jUtil=new JavaUtility();
@@ -53,7 +53,7 @@ public class BaseClass {
 			System.out.println("===="+BROWSER+"====Launched succefully===");
 			sdriver=driver;//this is used for  take screen shot in listeners
 		}
-		else if(BROWSER.equalsIgnoreCase("Firfox"))
+		else if(BROWSER.equalsIgnoreCase("Firefox"))
 		{
 			
 //			WebDriverManager.firefoxdriver().setup();
