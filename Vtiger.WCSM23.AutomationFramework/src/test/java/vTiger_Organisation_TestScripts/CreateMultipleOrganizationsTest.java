@@ -18,15 +18,12 @@ import vTiger_genericutility.BaseClass;
 public class CreateMultipleOrganizationsTest extends BaseClass {
 	
 	@Test(dataProvider = "orgNames")
-	public void createMultipleorgTest(String ORG,String INDUSTRY,String student,int marks) throws Exception
+	public void createMultipleorgTest(String ORG,String INDUSTRY) throws Exception
 	{
 		
 		String ORGNAME = ORG+jUtil.getRandomNumber();
 		
-		String stud = student;	
-		System.out.println(stud);
-		
-		System.out.println(marks);
+	
 	 
 		//step3:navigate to the organization link
 		HomePage hp=new HomePage(driver);
@@ -56,7 +53,7 @@ public class CreateMultipleOrganizationsTest extends BaseClass {
 	@DataProvider(name="orgNames")
 	public  Object[][] getData() throws EncryptedDocumentException, IOException
 	{
-		Object[][] data = eUtil.readmultipleDatafromExcelSheet("multipleOrgs");
+		Object[][] data = eUtil.readmultipleDatafromExcel("multipleOrgs");
 		return data;
 	}
 }

@@ -79,6 +79,7 @@ public class ExcelFileUtility {
 		{
 			for(int j=0;j<lastCel;j++)
 			{
+			
 				data[i][j]=sh.getRow(i+1).getCell(j).getStringCellValue();
 			}
 		}
@@ -143,7 +144,8 @@ public class ExcelFileUtility {
 	                    data[i][j] = null; // Cell is null
 	                }
 	            }
-	        } else {
+	        } 
+	        else {
 	            // Row is null
 	            for (int j = 0; j < lastCell; j++) {
 	                data[i][j] = null;

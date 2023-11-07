@@ -1,5 +1,6 @@
 package vTiger_Organisation_TestScripts;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -15,10 +16,11 @@ import vTiger_genericutility.BaseClass;
 
 @Listeners(vTiger_genericutility.ListnersImplentation.class)
 
-public class CreateContactWithorganizationTest extends BaseClass{
+public class CreateContactWithorganizationTest extends BaseClass {
 	@Test(groups = "smokesuite")
 	public void createContactWithOrg() throws Exception
 	{
+		
 		/*read data from excel sheet*/
 		String LASTNAME = eUtil.readDatafromExcel("contacts", 7, 2);
 		String ORGNAME = eUtil.readDatafromExcel("contacts", 7, 3)+jUtil.getRandomNumber();

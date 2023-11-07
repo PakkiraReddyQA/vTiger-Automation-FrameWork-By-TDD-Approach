@@ -28,7 +28,7 @@ public class BaseClass {
 	public  ExcelFileUtility eUtil=new ExcelFileUtility();
 	public  JavaUtility jUtil=new JavaUtility();
     public 	WebDriverUtility wUtil=new WebDriverUtility();
-	public  WebDriver driver=null;
+	public  WebDriver driver;
 	public  static WebDriver sdriver;//this is used for  take screen shot 
 	
 	@BeforeSuite(groups = {"smokesuite","regressionSuite"})
@@ -42,6 +42,7 @@ public class BaseClass {
 	public void bcConfiguration(/*String BROWSER*/) throws Exception
 	{
 		//Launch the browser
+	
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
 		String URL = pUtil.readDataFromPropertyFile("url");
 		if(BROWSER.equalsIgnoreCase("chrome"))

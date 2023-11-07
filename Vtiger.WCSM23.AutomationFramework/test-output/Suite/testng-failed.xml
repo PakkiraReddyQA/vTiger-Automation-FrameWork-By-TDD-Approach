@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="Test-Runner1(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest">
+      <class name="testPractice2.LoginToapplication">
         <methods>
-          <include name="bsConfiguration"/>
-          <include name="bcConfiguration"/>
-          <include name="acConfiguration"/>
-          <include name="asConfiguration"/>
-          <include name="amConfiguration"/>
-          <include name="bmConfiguration"/>
-          <include name="createNewOrgWithIndustry"/>
+          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest -->
+      </class> <!-- testPractice2.LoginToapplication -->
     </classes>
-  </test> <!-- Test-Runner1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

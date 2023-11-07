@@ -32,6 +32,19 @@ public class OrganizationPage {
     @FindBy(xpath = "//table[@class='lvt small']/tbody/tr[*]/td[1]/input[@id='9']")
     private WebElement clickBasedIndex;
     
+    
+    @FindBy(xpath = "//table/tbody/tr/td[@class='lvtCol']")
+    private List<WebElement> HeaderList;
+    
+	public List<WebElement> getPrintAllOrgs() {
+		return printAllOrgs;
+	}
+	public WebElement getClickBasedIndex() {
+		return clickBasedIndex;
+	}
+	public WebElement getHeaderList() {
+		return (WebElement) HeaderList;
+	}
 	// Intialization
 	public OrganizationPage(WebDriver driver)
 	{
