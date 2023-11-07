@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vTiger_Organisation_TestScripts.CreateMultipleOrganizationsTest">
+      <class name="vTiger_Organisation_TestScripts.OrgsPrinting">
         <methods>
           <include name="bsConfiguration"/>
-          <include name="createMultipleorgTest"/>
           <include name="bcConfiguration"/>
           <include name="acConfiguration"/>
           <include name="asConfiguration"/>
           <include name="amConfiguration"/>
           <include name="bmConfiguration"/>
+          <include name="PrintRowsColumns"/>
         </methods>
-      </class> <!-- vTiger_Organisation_TestScripts.CreateMultipleOrganizationsTest -->
+      </class> <!-- vTiger_Organisation_TestScripts.OrgsPrinting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
