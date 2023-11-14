@@ -9,6 +9,7 @@ public class W3schools {
 
      public static void main(String[] args) throws Exception 
      {
+    
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.w3schools.com/");

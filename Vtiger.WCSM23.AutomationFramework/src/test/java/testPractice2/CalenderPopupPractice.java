@@ -12,23 +12,32 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import vTiger_genericutility.WebDriverUtility;
+
 public class CalenderPopupPractice {
 	@Test
 	public void calanderPopup() throws InterruptedException
 	{
+		WebDriverUtility wUtil=new WebDriverUtility();
 		
-		WebDriver driver=new ChromeDriver();
+		ChromeOptions opt=new ChromeOptions();
+		opt.addArguments("--disable-notifications");
+		WebDriver driver=new ChromeDriver(opt);
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://www.makemytrip.com/");
 		Thread.sleep(3000);
 		Actions act=new Actions(driver);
-		act.moveByOffset(20, 20).click().perform();
-		
+	
+		act.moveByOffset(10,10).click().perform();
+//		driver.findElement(By.xpath("//span[@data-cy='closeModal']")).click();
+		Thread.sleep(3000);
 		WebElement srcCity = driver.findElement(By.id("fromCity"));
 		WebElement toCity = driver.findElement(By.id("toCity"));
 		
@@ -47,7 +56,7 @@ public class CalenderPopupPractice {
 		wait.until(ExpectedConditions.elementToBeClickable(dep));
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@aria-label='Wed Jul 19 2023']")).click();
-		
+		driver.close();
 	}
 	@Test
 	void jdbc() throws SQLException

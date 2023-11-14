@@ -12,8 +12,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
-public class ExcelFileUtility {
+public  class ExcelFileUtility {
 	/**
 	 * This method will read data from excel sheet and return the value
 	 * @param sheet

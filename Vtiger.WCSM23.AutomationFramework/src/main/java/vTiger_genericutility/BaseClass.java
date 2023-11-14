@@ -25,7 +25,7 @@ import vTiger.ObjectReposotary.LoginPage;
 public class BaseClass {
 
 	public  PropertiesFileUtility pUtil=new PropertiesFileUtility();
-	public  ExcelFileUtility eUtil=new ExcelFileUtility();
+	public   ExcelFileUtility eUtil=new ExcelFileUtility();
 	public  JavaUtility jUtil=new JavaUtility();
     public 	WebDriverUtility wUtil=new WebDriverUtility();
 	public  WebDriver driver;

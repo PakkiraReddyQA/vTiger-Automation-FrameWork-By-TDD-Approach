@@ -1,41 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-07T11:40:11 IST" name="Default suite" finished-at="2023-11-07T11:40:22 IST" duration-ms="11213">
+  <suite started-at="2023-11-14T18:14:02 IST" name="Default suite" finished-at="2023-11-14T18:15:05 IST" duration-ms="63462">
     <groups>
+      <group name="smokesuite">
+        <method signature="CreateContactWithorganizationTest.createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" name="createContactWithOrg" class="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest"/>
+      </group> <!-- smokesuite -->
     </groups>
-    <test started-at="2023-11-07T11:40:11 IST" name="Default test" finished-at="2023-11-07T11:40:22 IST" duration-ms="11213">
-      <class name="vTiger_Organisation_TestScripts.OrgsPrinting">
-        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:11 IST" name="bsConfiguration" finished-at="2023-11-07T11:40:11 IST" duration-ms="7" status="PASS">
+    <test started-at="2023-11-14T18:14:02 IST" name="Default test" finished-at="2023-11-14T18:15:05 IST" duration-ms="63462">
+      <class name="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest">
+        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:14:02 IST" name="bsConfiguration" finished-at="2023-11-14T18:14:02 IST" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfiguration -->
-        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:11 IST" name="bcConfiguration" finished-at="2023-11-07T11:40:15 IST" duration-ms="3749" status="PASS">
+        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:14:02 IST" name="bcConfiguration" finished-at="2023-11-14T18:14:15 IST" duration-ms="13156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfiguration -->
-        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:15 IST" name="bmConfiguration" finished-at="2023-11-07T11:40:17 IST" duration-ms="1675" status="PASS">
+        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:14:15 IST" name="bmConfiguration" finished-at="2023-11-14T18:14:20 IST" duration-ms="5084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bmConfiguration -->
-        <test-method signature="OrgTolist()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:17 IST" name="OrgTolist" finished-at="2023-11-07T11:40:20 IST" duration-ms="3726" status="PASS">
+        <test-method signature="createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:14:20 IST" name="createContactWithOrg" finished-at="2023-11-14T18:14:59 IST" duration-ms="38637" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OrgTolist -->
-        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:20 IST" name="amConfiguration" finished-at="2023-11-07T11:40:21 IST" duration-ms="968" status="PASS">
+        </test-method> <!-- createContactWithOrg -->
+        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:14:59 IST" name="amConfiguration" finished-at="2023-11-14T18:15:02 IST" duration-ms="3237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amConfiguration -->
-        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:21 IST" name="acConfiguration" finished-at="2023-11-07T11:40:22 IST" duration-ms="1059" status="PASS">
+        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:15:02 IST" name="acConfiguration" finished-at="2023-11-14T18:15:05 IST" duration-ms="2818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfiguration -->
-        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.OrgsPrinting@712625fd]" started-at="2023-11-07T11:40:22 IST" name="asConfiguration" finished-at="2023-11-07T11:40:22 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@75437611]" started-at="2023-11-14T18:15:06 IST" name="asConfiguration" finished-at="2023-11-14T18:15:06 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfiguration -->
-      </class> <!-- vTiger_Organisation_TestScripts.OrgsPrinting -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateContactWithorganizationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
