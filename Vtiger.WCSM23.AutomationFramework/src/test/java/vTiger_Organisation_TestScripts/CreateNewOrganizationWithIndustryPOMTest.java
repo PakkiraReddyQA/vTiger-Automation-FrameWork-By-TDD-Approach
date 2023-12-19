@@ -35,6 +35,7 @@ public class CreateNewOrganizationWithIndustryPOMTest extends BaseClass {
 		//Step5:validate for organization
 		OrganizationInfoPage orgf=new OrganizationInfoPage(driver);
 		String ORGHEADER = orgf.orgnizationHeaderText();
+		System.out.println(ORGHEADER+ORGNAME);
 		//step6:Validation
 		Assert.assertTrue(ORGHEADER.contains(ORGNAME));
 	}

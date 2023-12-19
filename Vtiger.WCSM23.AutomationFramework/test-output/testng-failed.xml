@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testPractice2.HYRtutorlias">
+      <class name="vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest">
         <methods>
-          <include name="hyrtu"/>
+          <include name="bsConfiguration"/>
+          <include name="bcConfiguration"/>
+          <include name="acConfiguration"/>
+          <include name="asConfiguration"/>
+          <include name="amConfiguration"/>
+          <include name="bmConfiguration"/>
+          <include name="createNewOrgWithIndustry"/>
         </methods>
-      </class> <!-- testPractice2.HYRtutorlias -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

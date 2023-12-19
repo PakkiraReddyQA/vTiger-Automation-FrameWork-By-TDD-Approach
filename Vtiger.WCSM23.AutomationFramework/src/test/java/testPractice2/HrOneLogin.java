@@ -11,8 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class HrOneLogin {
-	
-	public static void main(String[] args) throws Exception
+	@Test
+	void hrone() throws Exception
 	{
 		ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
