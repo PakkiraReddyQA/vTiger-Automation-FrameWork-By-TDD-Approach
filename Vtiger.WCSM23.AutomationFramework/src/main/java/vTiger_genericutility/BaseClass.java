@@ -48,9 +48,9 @@ public class BaseClass {
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 //			WebDriverManager.chromedriver().setup();
-//			ChromeOptions options=new ChromeOptions();
-//			options.addArguments("--remote-allow-origins=*");
-			driver=new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver(options);
 			System.out.println("===="+BROWSER+"====Launched succefully===");
 			sdriver=driver;//this is used for  take screen shot in listeners
 		}

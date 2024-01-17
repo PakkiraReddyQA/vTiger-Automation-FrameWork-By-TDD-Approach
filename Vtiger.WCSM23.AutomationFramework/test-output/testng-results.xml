@@ -1,83 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
-    <line>
-      <![CDATA[--clicked on Organization link--]]>
-    </line>
-    <line>
-      <![CDATA[--clicked on Organization look Image--]]>
-    </line>
-    <line>
-      <![CDATA[--Organization created with Industry and saved succefully --]]>
-    </line>
-    <line>
-      <![CDATA[--clicked on Contacts link--]]>
-    </line>
-    <line>
-      <![CDATA[--clicked on Contact lookUp Image link--]]>
-    </line>
-    <line>
-      <![CDATA[--Organization created  with contact and saved succefully --]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-12-09T21:22:14 IST" name="Default suite" finished-at="2023-12-09T21:22:45 IST" duration-ms="30961">
+  <suite started-at="2023-12-20T22:04:47 IST" name="Default suite" finished-at="2023-12-20T22:04:48 IST" duration-ms="663">
     <groups>
-      <group name="smkesuite">
-        <method signature="CreateContactWithOrganizationPOMTest.createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" name="createContactWithOrgTest" class="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
-      </group> <!-- smkesuite -->
-      <group name="regressionSuite">
-        <method signature="CreateContactWithOrganizationPOMTest.createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" name="createContactWithOrgTest" class="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
-      </group> <!-- regressionSuite -->
+      <group name="smokesuite">
+        <method signature="CreateContactWithorganizationTest.createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" name="createContactWithOrg" class="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest"/>
+      </group> <!-- smokesuite -->
     </groups>
-    <test started-at="2023-12-09T21:22:14 IST" name="Default test" finished-at="2023-12-09T21:22:45 IST" duration-ms="30961">
-      <class name="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest">
-        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:14 IST" name="bsConfiguration" finished-at="2023-12-09T21:22:14 IST" duration-ms="8" status="PASS">
+    <test started-at="2023-12-20T22:04:47 IST" name="Default test" finished-at="2023-12-20T22:04:48 IST" duration-ms="663">
+      <class name="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest">
+        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:47 IST" name="bsConfiguration" finished-at="2023-12-20T22:04:47 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfiguration -->
-        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:15 IST" name="bcConfiguration" finished-at="2023-12-09T21:22:18 IST" duration-ms="3432" status="PASS">
+        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="bcConfiguration" finished-at="2023-12-20T22:04:48 IST" duration-ms="431" status="FAIL">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
+at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfiguration -->
-        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:18 IST" name="bmConfiguration" finished-at="2023-12-09T21:22:21 IST" duration-ms="2765" status="PASS">
+        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="bmConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088594" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bmConfiguration -->
-        <test-method signature="createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:21 IST" name="createContactWithOrgTest" finished-at="2023-12-09T21:22:43 IST" duration-ms="22398" status="PASS">
+        <test-method signature="createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="createContactWithOrg" finished-at="2023-12-20T22:04:48 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
+error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
+at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
-            <line>
-              <![CDATA[--clicked on Organization link--]]>
-            </line>
-            <line>
-              <![CDATA[--clicked on Organization look Image--]]>
-            </line>
-            <line>
-              <![CDATA[--Organization created with Industry and saved succefully --]]>
-            </line>
-            <line>
-              <![CDATA[--clicked on Contacts link--]]>
-            </line>
-            <line>
-              <![CDATA[--clicked on Contact lookUp Image link--]]>
-            </line>
-            <line>
-              <![CDATA[--Organization created  with contact and saved succefully --]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- createContactWithOrgTest -->
-        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:43 IST" name="amConfiguration" finished-at="2023-12-09T21:22:45 IST" duration-ms="1858" status="PASS">
+        </test-method> <!-- createContactWithOrg -->
+        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="amConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088608" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amConfiguration -->
-        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:45 IST" name="acConfiguration" finished-at="2023-12-09T21:22:45 IST" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="acConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088610" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfiguration -->
-        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@2e3967ea]" started-at="2023-12-09T21:22:46 IST" name="asConfiguration" finished-at="2023-12-09T21:22:46 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="asConfiguration" finished-at="2023-12-20T22:04:48 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfiguration -->
-      </class> <!-- vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateContactWithorganizationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
