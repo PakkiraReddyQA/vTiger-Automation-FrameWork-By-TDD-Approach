@@ -5,7 +5,7 @@
     <classes>
       <class name="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
       <class name="vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest"/>
-      <class name="vTiger_Organisation_TestScripts.CreateOrganizationWithDDT"></class>
+      <class name="vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

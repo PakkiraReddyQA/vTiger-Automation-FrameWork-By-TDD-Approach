@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 20 22:04:47 IST 2023</td>
+<td>Started on:</td><td>Wed Jan 17 22:08:39 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (663 ms)</td>
+<tr><td>Total time:</td><td>20 seconds (20478 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,244 +67,18 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vTiger_Organisation_TestScripts.CreateContactWithorganizationTest.bcConfiguration()'><b>bcConfiguration</b><br>Test class: vTiger_Organisation_TestScripts.CreateContactWithorganizationTest</td>
-<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 32 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1361393151", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1361393151'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 32 more
-</pre></div></td>
-<td>0</td>
-<td>vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='vTiger_Organisation_TestScripts.CreateContactWithorganizationTest.bmConfiguration()'><b>bmConfiguration</b><br>Test class: vTiger_Organisation_TestScripts.CreateContactWithorganizationTest</td>
+<td title='vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest.createNewOrgWithIndustry()'><b>createNewOrgWithIndustry</b><br>Test class: vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest</td>
 <td></td>
-<td>-1703090088</td>
-<td>vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c</td></tr>
-<tr>
-<td title='vTiger_Organisation_TestScripts.CreateContactWithorganizationTest.amConfiguration()'><b>amConfiguration</b><br>Test class: vTiger_Organisation_TestScripts.CreateContactWithorganizationTest</td>
-<td></td>
-<td>-1703090088</td>
-<td>vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c</td></tr>
-<tr>
-<td title='vTiger_Organisation_TestScripts.CreateContactWithorganizationTest.acConfiguration()'><b>acConfiguration</b><br>Test class: vTiger_Organisation_TestScripts.CreateContactWithorganizationTest</td>
-<td></td>
-<td>-1703090088</td>
-<td>vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='vTiger_Organisation_TestScripts.CreateContactWithorganizationTest.createContactWithOrg()'><b>createContactWithOrg</b><br>Test class: vTiger_Organisation_TestScripts.CreateContactWithorganizationTest</td>
-<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 32 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1191864687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1191864687'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 32 more
-</pre></div></td>
-<td>0</td>
-<td>vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c</td></tr>
+<td>11</td>
+<td>vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@130c12b7</td></tr>
 </table><p>
 </body>
 </html>

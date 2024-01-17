@@ -1,162 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[--clicked on Organization link--]]>
+    </line>
+    <line>
+      <![CDATA[--clicked on Organization look Image--]]>
+    </line>
+    <line>
+      <![CDATA[--Organization created with Industry and saved succefully --]]>
+    </line>
+    <line>
+      <![CDATA[--clicked on Contacts link--]]>
+    </line>
+    <line>
+      <![CDATA[--clicked on Contact lookUp Image link--]]>
+    </line>
+    <line>
+      <![CDATA[--Organization created  with contact and saved succefully --]]>
+    </line>
+    <line>
+      <![CDATA[[ ACC796 ] Amdoc1993824336 - Organization Information]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-12-20T22:04:47 IST" name="Default suite" finished-at="2023-12-20T22:04:48 IST" duration-ms="663">
+  <suite started-at="2024-01-17T22:37:41 IST" name="Suite" finished-at="2024-01-17T22:38:23 IST" duration-ms="41755">
     <groups>
-      <group name="smokesuite">
-        <method signature="CreateContactWithorganizationTest.createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" name="createContactWithOrg" class="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest"/>
-      </group> <!-- smokesuite -->
+      <group name="smkesuite">
+        <method signature="CreateContactWithOrganizationPOMTest.createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" name="createContactWithOrgTest" class="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
+      </group> <!-- smkesuite -->
+      <group name="regressionSuite">
+        <method signature="CreateContactWithOrganizationPOMTest.createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" name="createContactWithOrgTest" class="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest"/>
+      </group> <!-- regressionSuite -->
     </groups>
-    <test started-at="2023-12-20T22:04:47 IST" name="Default test" finished-at="2023-12-20T22:04:48 IST" duration-ms="663">
-      <class name="vTiger_Organisation_TestScripts.CreateContactWithorganizationTest">
-        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:47 IST" name="bsConfiguration" finished-at="2023-12-20T22:04:47 IST" duration-ms="5" status="PASS">
+    <test started-at="2024-01-17T22:37:41 IST" name="Test" finished-at="2024-01-17T22:38:23 IST" duration-ms="41755">
+      <class name="vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest">
+        <test-method is-config="true" signature="bsConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:37:41 IST" name="bsConfiguration" finished-at="2024-01-17T22:37:41 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfiguration -->
-        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="bcConfiguration" finished-at="2023-12-20T22:04:48 IST" duration-ms="431" status="FAIL">
-          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
-            <message>
-              <![CDATA[Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
-at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
+        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:37:41 IST" name="bcConfiguration" finished-at="2024-01-17T22:37:44 IST" duration-ms="2461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfiguration -->
-        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="bmConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088594" status="SKIP">
+        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:37:44 IST" name="bmConfiguration" finished-at="2024-01-17T22:37:46 IST" duration-ms="1666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bmConfiguration -->
-        <test-method signature="createContactWithOrg()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="createContactWithOrg" finished-at="2023-12-20T22:04:48 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
-            <message>
-              <![CDATA[Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}, error Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
-at vTiger_genericutility.BaseClass.bcConfiguration(BaseClass.java:53)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, chrome, --output, json]
-error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:144)
-at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
+        <test-method signature="createContactWithOrgTest()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:37:46 IST" name="createContactWithOrgTest" finished-at="2024-01-17T22:37:59 IST" duration-ms="13331" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[--clicked on Organization link--]]>
+            </line>
+            <line>
+              <![CDATA[--clicked on Organization look Image--]]>
+            </line>
+            <line>
+              <![CDATA[--Organization created with Industry and saved succefully --]]>
+            </line>
+            <line>
+              <![CDATA[--clicked on Contacts link--]]>
+            </line>
+            <line>
+              <![CDATA[--clicked on Contact lookUp Image link--]]>
+            </line>
+            <line>
+              <![CDATA[--Organization created  with contact and saved succefully --]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- createContactWithOrg -->
-        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="amConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088608" status="SKIP">
+        </test-method> <!-- createContactWithOrgTest -->
+        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:37:59 IST" name="amConfiguration" finished-at="2024-01-17T22:38:00 IST" duration-ms="1091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amConfiguration -->
-        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="acConfiguration" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1703090088610" status="SKIP">
+        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:38:00 IST" name="acConfiguration" finished-at="2024-01-17T22:38:00 IST" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfiguration -->
-        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateContactWithorganizationTest@942a29c]" started-at="2023-12-20T22:04:48 IST" name="asConfiguration" finished-at="2023-12-20T22:04:48 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="asConfiguration()[pri:0, instance:vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest@4f80542f]" started-at="2024-01-17T22:38:23 IST" name="asConfiguration" finished-at="2024-01-17T22:38:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfiguration -->
-      </class> <!-- vTiger_Organisation_TestScripts.CreateContactWithorganizationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- vTiger_contacts_TestScripts.CreateContactWithOrganizationPOMTest -->
+      <class name="vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest">
+        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@a38c7fe]" started-at="2024-01-17T22:38:00 IST" name="bcConfiguration" finished-at="2024-01-17T22:38:02 IST" duration-ms="1601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bcConfiguration -->
+        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@a38c7fe]" started-at="2024-01-17T22:38:02 IST" name="bmConfiguration" finished-at="2024-01-17T22:38:04 IST" duration-ms="1832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfiguration -->
+        <test-method signature="createNewOrgWithIndustry()[pri:0, instance:vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@a38c7fe]" started-at="2024-01-17T22:38:04 IST" name="createNewOrgWithIndustry" finished-at="2024-01-17T22:38:10 IST" duration-ms="6757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewOrgWithIndustry -->
+        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@a38c7fe]" started-at="2024-01-17T22:38:10 IST" name="amConfiguration" finished-at="2024-01-17T22:38:11 IST" duration-ms="1104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfiguration -->
+        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest@a38c7fe]" started-at="2024-01-17T22:38:11 IST" name="acConfiguration" finished-at="2024-01-17T22:38:12 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acConfiguration -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateNewOrganizationWithIndustryPOMTest -->
+      <class name="vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest">
+        <test-method is-config="true" signature="bcConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest@4d5650ae]" started-at="2024-01-17T22:38:12 IST" name="bcConfiguration" finished-at="2024-01-17T22:38:13 IST" duration-ms="1672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bcConfiguration -->
+        <test-method is-config="true" signature="bmConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest@4d5650ae]" started-at="2024-01-17T22:38:13 IST" name="bmConfiguration" finished-at="2024-01-17T22:38:15 IST" duration-ms="1718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfiguration -->
+        <test-method signature="craeteOrgWithIndustry()[pri:0, instance:vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest@4d5650ae]" started-at="2024-01-17T22:38:15 IST" name="craeteOrgWithIndustry" finished-at="2024-01-17T22:38:22 IST" duration-ms="6738" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[ ACC796 ] Amdoc1993824336 - Organization Information]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- craeteOrgWithIndustry -->
+        <test-method is-config="true" signature="amConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest@4d5650ae]" started-at="2024-01-17T22:38:22 IST" name="amConfiguration" finished-at="2024-01-17T22:38:23 IST" duration-ms="1037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfiguration -->
+        <test-method is-config="true" signature="acConfiguration()[pri:0, instance:vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest@4d5650ae]" started-at="2024-01-17T22:38:23 IST" name="acConfiguration" finished-at="2024-01-17T22:38:23 IST" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acConfiguration -->
+      </class> <!-- vTiger_Organisation_TestScripts.CreateOrgAndSelectHelthcareInIndustryTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
