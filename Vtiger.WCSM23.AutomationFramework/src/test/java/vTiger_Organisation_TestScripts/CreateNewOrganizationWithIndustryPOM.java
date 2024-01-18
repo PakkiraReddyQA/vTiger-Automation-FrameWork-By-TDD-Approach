@@ -12,7 +12,7 @@ import vTiger.ObjectReposotary.OrganizationPage;
 import vTiger_genericutility.BaseClass;
 
 @Listeners(vTiger_genericutility.ListenersImplementaionClass.class)
-public class CreateNewOrganizationWithIndustryPOMTest extends BaseClass {
+public class CreateNewOrganizationWithIndustryPOM extends BaseClass {
 	
 	@Test
 	public void createNewOrgWithIndustry() throws Exception
